@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator v2</title>
+  </head>
+  <body>
+    <form>
+      <div><input type="text" id="no_1" value="" /></div>
+      <div><input type="text" id="no_2" value="" /></div>
+      <div><button type="button" onclick="calplus()">+</button></div>
+      <div>
+        <span style="font-size: x-large; color: #a02c0c" id="tx_result"
+          >00</span
+        >
+      </div>
+    </form>
+    <script>
+      // กดแล้ว+ข้อความในกล่อง
+      function calplus() {
+        //รับตัวเลขจากกล่องทั้ง2
+        var no_01 = Number(document.getElementById("no_1").value);
+        var no_02 = Number(document.getElementById("no_2").value);
+        //เอาตัวเลขมา+
+        var result = no_01 + no_02;
+        //เอาผลลัพไปแสดงผล
+        document.getElementById("tx_result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
